@@ -1,0 +1,62 @@
+m=int(input("enter no of row:"))
+n=int(input("enter no of col:"))
+o=[]
+for i in range(m):
+  row=[]
+  for j in range(n):
+    num=int(input())
+    row.append(num)
+  o.append(row) 
+print("Fisrt Matrix is :",o) 
+a=[]
+for i in range(m):
+  row=[]
+  for j in range(n):
+    num=int(input())
+    row.append(num)
+  a.append(row) 
+print("Second Matrix is :",a)  
+s1=[] 
+for i in range(m):
+  for j in range(n):
+    if (o[i][j]!=0):
+      b=[]
+      b.append(i)
+      b.append(j)
+      b.append(o[i][j])
+      s1.append(b)
+print("Fisrt Spare Matrix is :",s1) 
+s2=[] 
+for i in range(m):
+  for j in range(n):
+    if (o[i][j]!=0):
+      b=[]
+      b.append(i)
+      b.append(j)
+      b.append(a[i][j])
+      s2.append(b)
+print("Second Spare Matrix is :",s2)    
+
+def add(s1,s2):
+  result=[[0,0,0],[0,0,0],[0,0,0],[0,0,0],[0,0,0]]
+  for i in range (len(s1)):
+    for i in range (len(s1[0])):
+      result[i][j]=s1[i][j]+s2[i][j]
+  print(result)
+print("Addition of Sparse Matrix is:")
+add(s1,s2)  
+
+def transpose(s1):
+  flag=[]
+  for i in s1:
+    flag0.append([i[1], i[0], i[2]])
+  print(flag) 
+print("Transpose of First Sparse Matrix is :")   
+transpose(s1)
+print("Transpose of Second Sparse Matrix is :")
+transpose(s2)
+
+
+
+
+#--------------------------END------------------------------
